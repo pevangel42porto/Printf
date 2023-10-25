@@ -18,5 +18,8 @@
 #include <stdarg.h>
 
 int				ft_printf(const char *format, ...);
+int             ft_printf_c(int c);
+int             ft_printf_s(char *str);
+int             ft_printf_p(unsigned int ptr, va_list);
 
 #endif

@@ -12,39 +12,7 @@
 
 #include "ft_printf.h"
 
-static int	ft_print_c(char c)
-{
-	return (write(1, &c, 1));
-}
 
-static int	ft_print_s(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-	return (i);
-}
-static int	ft_print_p(void	*ptr)
-{
-	
-}
-
-static int	ft_print_p(unsigned long ptr)
-{
-	int	size;
-	
-	size = 0;
-	if(ptr)
-	{
-		size += ft_print_digit();	
-	}
-			
-}
 static int	ft_printformat(char *format, va_list ap)
 {
 	int	size;
@@ -55,7 +23,7 @@ static int	ft_printformat(char *format, va_list ap)
 	else if(format == 's')
 		size += ft_print_s(va_arg(ap, int));
 	else if (format == 'p')
-		size += ft_
+		size += ft_printf_p(va_arg(ap, unsigned int));
 		
 }
 int	ft_printf(char *format, ...)
