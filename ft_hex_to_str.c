@@ -6,12 +6,11 @@
 /*   By: pevangel < pevangel@student.42porto.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:02:31 by pevangel          #+#    #+#             */
-/*   Updated: 2023/10/26 16:49:57 by pevangel         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:12:21 by pevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 static int	count_hex(unsigned long n)
 {
 	int	i;
@@ -39,6 +38,5 @@ char	*hex_to_str(unsigned long n, char *base)
         n /= 16;
         size--;
     }
-	free();
-	return (hex);
+    return (hex);
 }
