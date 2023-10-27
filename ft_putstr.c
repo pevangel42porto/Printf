@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_s.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pevangel < pevangel@student.42porto.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 10:19:00 by pevangel          #+#    #+#             */
-/*   Updated: 2023/10/25 10:19:00 by pevangel         ###   ########.fr       */
+/*   Updated: 2023/10/27 15:25:26 by pevangel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ static	int	ft_strlen(char *str)
 
 int	ft_putstr(char *str)
 {
-	int i;
+	int	i;
+	int	len;
 
 	i = 0;
 	if (!str)
@@ -32,7 +33,7 @@ int	ft_putstr(char *str)
 		write (1, "(null)", 6);
 		return (6);
 	}
-	int len = ft_strlen(str);
+	len = ft_strlen(str);
 	write(1, str, len);
 	return (len);
 }

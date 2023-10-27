@@ -14,14 +14,14 @@
 
 int	ft_ptr(void *nbr, char *base)
 {
-	int	len;
-	char	*str;
-	unsigned long n;
+	int				len;
+	char			*str;
+	unsigned long	n;
 
 	n = (unsigned long)nbr;
 	if (n == 0)
 		return (write(1, "(nil)", 5));
-	str = hex_to_str(n, base);
+	str = hex_to_ptr(n, base);
 	if (str == 0)
 		return (write(1, "(nil)", 5));
 	len = ft_putstr("0x") + ft_putstr(str);
